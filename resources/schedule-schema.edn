@@ -1,0 +1,30 @@
+[
+ ;; ================================
+ ;; SCHEDULE
+ ;; ================================
+
+ {:db/ident :schedule/id
+  :db/valueType :db.type/uuid
+  :db/cardinality :db.cardinality/one
+  :db/unique :db.unique/identity
+  :db/doc "Unique schedule identifier"}
+
+ {:db/ident :transaction/correlation-id
+  :db/valueType :db.type/uuid
+  :db/cardinality :db.cardinality/one
+  :db/doc "Unique processor identifier"}
+
+ {:db/ident :schedule/process-at
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Processing date"}
+
+ {:db/ident :schedule/status
+  :db/valueType :db.type/keyword
+  :db/cardinality :db.cardinality/one
+  :db/doc "Schedule status (pending, processed, cancelled)"}
+
+ {:db/ident :schedule/transaction
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "Reference to transaction to be processed"}]

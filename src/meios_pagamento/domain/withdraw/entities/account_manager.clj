@@ -1,4 +1,4 @@
-(ns meios-pagamento.domain.entities.account-manager)
+(ns meios-pagamento.domain.withdraw.entities.account-manager)
 
 
 (defn withdraw? [account]

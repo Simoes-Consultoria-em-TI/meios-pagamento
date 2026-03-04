@@ -1,0 +1,40 @@
+[
+ ;; ================================
+ ;; TRANSACTION
+ ;; ================================
+
+ {:db/ident :transaction/id
+  :db/valueType :db.type/uuid
+  :db/cardinality :db.cardinality/one
+  :db/unique :db.unique/identity
+  :db/doc "Unique transaction identifier"}
+
+ {:db/ident :transaction/correlation-id
+  :db/valueType :db.type/uuid
+  :db/cardinality :db.cardinality/one
+  :db/doc "Unique processor identifier"}
+
+ {:db/ident :transaction/due-date
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Charge date"}
+
+ {:db/ident :transaction/date-fail
+  :db/valueType :db.type/instant
+  :db/cardinality :db.cardinality/one
+  :db/doc "Fail date"}
+
+ {:db/ident :transaction/amount
+  :db/valueType :db.type/bigdec
+  :db/cardinality :db.cardinality/one
+  :db/doc "Charged amount"}
+
+ {:db/ident :transaction/type
+  :db/valueType :db.type/keyword
+  :db/cardinality :db.cardinality/one
+  :db/doc "Transaction type (pix, ted, credit, etc)"}
+
+ {:db/ident :transaction/status
+  :db/valueType :db.type/keyword
+  :db/cardinality :db.cardinality/one
+  :db/doc "Transaction status (pending, approved, failed, etc)"}]

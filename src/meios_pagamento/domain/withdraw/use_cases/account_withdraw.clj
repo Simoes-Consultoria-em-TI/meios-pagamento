@@ -1,5 +1,5 @@
-(ns meios-pagamento.domain.user_cases.account-withdraw
-  (:require [meios-pagamento.domain.entities.account-manager :as am]))
+(ns meios-pagamento.domain.withdraw.use-cases.account-withdraw
+  (:require [meios-pagamento.domain.withdraw.entities.account-manager :as am]))
 
 
 (defn- verify-minimal-value [transaction]

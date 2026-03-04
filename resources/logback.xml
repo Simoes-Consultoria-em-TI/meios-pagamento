@@ -1,0 +1,18 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}
+                %-5level
+                [%X{correlation-id}]
+                %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- nível padrão do app -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <!-- opcional: aumentar ou reduzir log de algum namespace -->
+    <!-- <logger name="my.app" level="DEBUG"/> -->
+</configuration>
